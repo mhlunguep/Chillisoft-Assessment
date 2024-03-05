@@ -32,7 +32,7 @@ class Program
                 WriteIndented = true  // Set the option for indented formatting.
             };
             string jsonOutput = JsonSerializer.Serialize(outputData, options);
-            Console.WriteLine(jsonOutput);  // Output the serialized JSON.
+            //Console.WriteLine(jsonOutput);  // Output the serialized JSON.
 
             // Save the JSON output to a file named "output.json" in the 'files' directory
             string outputFilePath = Path.Combine(filesDirectory, "output.json");
@@ -47,14 +47,14 @@ class Program
     }
 
     // Read user data from the provided file and return a list of tuples containing user names and permissions.
-    static List<(string, string[])> ReadUsersFile(string usersFile)
+    static List<(string, char[])> ReadUsersFile(string usersFile)
     {
-        var usersData = new List<(string, string[])>();
+        var usersData = new List<(string, char[])>();
         foreach (string line in File.ReadAllLines(usersFile))
         {
             var parts = line.Trim().Split(' ');
             string userName = parts[0];
-            string[] permissions = parts.Skip(1).ToArray();
+            char[] permissions = (parts[1] + parts[2]).ToCharArray();
             usersData.Add((userName, permissions));
         }
         return usersData;
@@ -75,37 +75,23 @@ class Program
     }
 
     // Generate the output JSON structure based on user permissions and menu data.
-    static List<User> GenerateOutput(List<(string, string[])> usersData, Dictionary<int, string> menusData)
+    static List<User> GenerateOutput(List<(string, char[])> usersData, Dictionary<int, string> menusData)
     {
         var output = new List<User>();
 
         foreach (var user in usersData)
         {
             string userName = user.Item1;
-            string[] permissions = user.Item2;
-
-            // Add spaces in each character of the permissions
-            StringBuilder formattedPermissions = new StringBuilder();
-
-            foreach (string permission in permissions)
-            {
-                foreach (char c in permission)
-                {
-                    formattedPermissions.Append(c);
-                    formattedPermissions.Append(' '); // Add a space after each character
-                }
-            }
-
-            string formattedPermissionsString = formattedPermissions.ToString();
+            char[] permissions = user.Item2;
+            
             var userMenuItems = new List<string>();
             // Iterate through each permission and map it to the corresponding menu item
-            for (int i = 0; i < formattedPermissionsString.Count(); i++)
+            for (int i = 0; i < permissions.Length; i++)
             {
-                // Check if the permission is 'Y' and if the menu ID exists in the menusData dictionary
-                if (formattedPermissionsString[i] == 'Y' && menusData.ContainsKey(i+1)) //
+                if (permissions[i] == 'Y' && menusData.ContainsKey(i + 1))
                 {
                     // Add the corresponding menu item to the user's menu items
-                    userMenuItems.Add(menusData[i+1]);
+                    userMenuItems.Add(menusData[i + 1]);
                 }
             }
 
@@ -116,3 +102,4 @@ class Program
         return output;
     }
 }
+
