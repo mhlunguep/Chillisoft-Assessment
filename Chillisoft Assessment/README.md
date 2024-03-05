@@ -17,7 +17,7 @@ Ensure you have a compatible environment to run the application:
 
 ## Instructions
 
-- Extract the provided zip file containing the code.
+- Clone this repository to your local machine.
 - Open the solution file in Visual Studio or your preferred code editor.
 - You should see Proram.cs, User.cs, README.md and the files folder and this should have users.txt and menus.txt
 - Run the application
