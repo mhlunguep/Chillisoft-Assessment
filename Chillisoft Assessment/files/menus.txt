@@ -1,0 +1,10 @@
+1, Applications Menu
+2, Security Permissions Menu
+3, Customers Menu
+4, Accounts Menu
+6, Settings Menu
+5, Pricing Menu
+7, Orders Menu
+8, Jobs Menu
+9, Profile Menu
+10, Help Menu

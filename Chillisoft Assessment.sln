@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenuPermissions", "Chillisoft Assessment\MenuPermissions.csproj", "{AA0E17E2-7D8B-46DD-BED0-8DAD45FB408B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA0E17E2-7D8B-46DD-BED0-8DAD45FB408B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA0E17E2-7D8B-46DD-BED0-8DAD45FB408B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA0E17E2-7D8B-46DD-BED0-8DAD45FB408B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA0E17E2-7D8B-46DD-BED0-8DAD45FB408B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A53AB0C5-61A1-426F-A167-D34DA3E42818}
+	EndGlobalSection
+EndGlobal
