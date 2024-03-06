@@ -8,6 +8,13 @@ The application takes two input files, users.txt and menus.txt, and generates ou
 
 ## Running the Application
 
+## Using Command Line Command
+
+- Unzip the project and go to Chillisoft-Assessment\Chillisoft Assessment\bin\Debug\net8.0
+- Open the terminal on the above location
+- Use this command `.\MenuPermissions.exe ` to run the the program
+- This will create the output.json on Chillisoft-Assessment\Chillisoft Assessment\files
+
 ### Prerequisites
 
 Ensure you have a compatible environment to run the application:

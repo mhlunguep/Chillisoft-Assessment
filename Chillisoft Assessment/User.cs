@@ -1,6 +1,6 @@
 ﻿
 internal class User
 {
-    public string UserName { get; set; }
-    public List<string> MenuItems { get; set; }
+    public string UserName { get; set; } = string.Empty;
+    public List<string>? MenuItems { get; set; }
 }
